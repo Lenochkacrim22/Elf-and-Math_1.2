@@ -43,7 +43,7 @@
             text-shadow: 0 0 10px #005900;
             z-index: 2;
             position: relative;
-            font-size: 2rem; /* Reduced */
+            font-size: 2rem;
         }
 
         .stats-container {
@@ -69,13 +69,13 @@
         }
 
         .stat-value {
-            font-size: 1em; /* Reduced */
+            font-size: 1em;
             font-weight: bold;
             color: #FF0000;
         }
 
         .stat-label {
-            font-size: 0.7em; /* Reduced */
+            font-size: 0.7em;
             opacity: 0.8;
         }
 
@@ -88,7 +88,7 @@
         .keys-title {
             text-align: center;
             margin-bottom: 6px;
-            font-size: 0.9em; /* Reduced */
+            font-size: 0.9em;
         }
 
         .keys-row {
@@ -99,7 +99,7 @@
         }
 
         .key-icon {
-            width: 14px; /* Reduced */
+            width: 14px;
             height: 14px;
             background-image: url('https://cdn-icons-png.flaticon.com/512/415/415536.png');
             background-size: contain;
@@ -148,8 +148,8 @@
 
         .player-sprite {
             position: absolute;
-            width: 40px; /* Reduced */
-            height: 40px;
+            width: 45px; /* Увеличил для мобильных */
+            height: 45px;
             background-image: url('https://cdn4.iconfinder.com/data/icons/christmas-day-25/64/Elf-fairy_tale-character-fantasy-christmas-avatar-512.png');
             background-size: contain;
             background-repeat: no-repeat;
@@ -162,8 +162,8 @@
 
         .enemy-sprite {
             position: absolute;
-            width: 40px; /* Reduced */
-            height: 40px;
+            width: 45px; /* Увеличил для мобильных */
+            height: 45px;
             background-image: url('https://icons.iconarchive.com/icons/martin-berube/character/256/Troll-icon.png');
             background-size: contain;
             background-repeat: no-repeat;
@@ -176,8 +176,8 @@
 
         .key-sprite {
             position: absolute;
-            width: 30px; /* Reduced */
-            height: 30px;
+            width: 35px; /* Увеличил для мобильных */
+            height: 35px;
             background-image: url('https://cdn-icons-png.flaticon.com/512/415/415536.png');
             background-size: contain;
             background-repeat: no-repeat;
@@ -189,8 +189,8 @@
 
         .exit-sprite {
             position: absolute;
-            width: 25px; /* Reduced */
-            height: 25px;
+            width: 30px; /* Увеличил для мобильных */
+            height: 30px;
             background-image: url('https://cdn-icons-png.flaticon.com/512/2731/2731907.png');
             background-size: contain;
             background-repeat: no-repeat;
@@ -215,10 +215,10 @@
             background: linear-gradient(to right, #a22128, #2f902c);
             color: white;
             border: none;
-            padding: 10px 20px; /* Reduced */
-            border-radius: 10px; /* Reduced */
+            padding: 10px 20px;
+            border-radius: 10px;
             cursor: pointer;
-            font-size: 0.9em; /* Reduced */
+            font-size: 0.9em;
             font-weight: 600;
             letter-spacing: 0.5px;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -252,42 +252,42 @@
 
         .modal-content {
             background-color:#005900;
-            padding: 15px; /* Reduced */
-            border-radius: 8px; /* Reduced */
+            padding: 15px;
+            border-radius: 8px;
             width: 90%;
-            max-width: 400px; /* Reduced */
+            max-width: 400px;
             box-shadow: 0 0 30px rgba(6, 182, 212, 0.3);
             border: 1px solid #06b6d4;
             z-index: 101;
         }
 
         .modal h2 {
-            margin-bottom: 12px; /* Reduced */
+            margin-bottom: 12px;
             color: #ffffff;
-            font-size: 1.4em; /* Reduced */
+            font-size: 1.4em;
         }
 
         .question-text {
-            font-size: 1.2em; /* Reduced */
-            margin-bottom: 12px; /* Reduced */
+            font-size: 1.2em;
+            margin-bottom: 12px;
             text-align: center;
         }
 
         .options {
             display: flex;
             flex-direction: column;
-            gap: 6px; /* Reduced */
-            margin-bottom: 12px; /* Reduced */
+            gap: 6px;
+            margin-bottom: 12px;
         }
 
         .option-btn {
             background-color: rgba(51, 65, 85, 0.8);
             color: white;
             border: none;
-            padding: 8px; /* Reduced */
-            border-radius: 4px; /* Reduced */
+            padding: 8px;
+            border-radius: 4px;
             cursor: pointer;
-            font-size: 1em; /* Reduced */
+            font-size: 1em;
             transition: background-color 0.2s;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
@@ -302,14 +302,15 @@
         }
 
         .win-stats {
-            margin: 12px 0; /* Reduced */
+            margin: 12px 0;
             text-align: center;
-            font-size: 0.9em; /* Reduced */
+            font-size: 0.9em;
         }
 
+        /* Улучшения для мобильных устройств */
         @media (max-width: 768px) {
             h1 {
-                font-size: 1.3rem; /* Smaller on mobile */
+                font-size: 1.5rem;
             }
             .stats-container {
                 gap: 12px;
@@ -319,16 +320,33 @@
                 font-size: 0.9rem;
             }
             .key-icon {
-                width: 12px;
-                height: 12px;
+                width: 16px; /* Увеличил для мобильных */
+                height: 16px;
             }
             .controls {
                 flex-direction: column;
                 align-items: stretch;
             }
             button {
-                font-size: 0.8em; /* Smaller on mobile */
+                font-size: 0.85em;
                 padding: 8px 16px;
+            }
+            /* Увеличиваем спрайты на мобильных */
+            .player-sprite {
+                width: 50px;
+                height: 50px;
+            }
+            .enemy-sprite {
+                width: 50px;
+                height: 50px;
+            }
+            .key-sprite {
+                width: 40px;
+                height: 40px;
+            }
+            .exit-sprite {
+                width: 35px;
+                height: 35px;
             }
         }
     </style>
