@@ -38,30 +38,29 @@
         }
 
         h1 {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             color: #FFFFFF;
             text-shadow: 0 0 10px #005900;
             z-index: 2;
             position: relative;
-            font-size: 3rem;
+            font-size: 2rem; /* Reduced */
         }
 
- .stats-container {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 15px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(200, 230, 255, 0.5));
-    padding: 12px 24px;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-    z-index: 2;
-    position: relative;
-    /* 🔴 КЛЮЧЕВЫЕ ИСПРАВЛЕНИЯ: */
-    width: fit-content;           /* Не растягиваем на всю ширину! */
-    margin-left: auto;
-    margin-right: auto;           /* Центрируем по горизонтали */
-    align-items: center;          /* Выравниваем дочерние элементы по вертикали */
-}
+        .stats-container {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(200, 230, 255, 0.5));
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+            z-index: 2;
+            position: relative;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            align-items: center;
+        }
 
         .stat {
             display: flex;
@@ -70,38 +69,38 @@
         }
 
         .stat-value {
-            font-size: 1.2em;
+            font-size: 1em; /* Reduced */
             font-weight: bold;
             color: #FF0000;
         }
 
         .stat-label {
-            font-size: 0.8em;
+            font-size: 0.7em; /* Reduced */
             opacity: 0.8;
         }
 
         .keys-container {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             z-index: 2;
             position: relative;
         }
 
         .keys-title {
             text-align: center;
-            margin-bottom: 8px;
-            font-size: 1em;
+            margin-bottom: 6px;
+            font-size: 0.9em; /* Reduced */
         }
 
         .keys-row {
             display: flex;
             justify-content: center;
-            gap: 6px;
+            gap: 5px;
             flex-wrap: wrap;
         }
 
         .key-icon {
-            width: 16px;
-            height: 16px;
+            width: 14px; /* Reduced */
+            height: 14px;
             background-image: url('https://cdn-icons-png.flaticon.com/512/415/415536.png');
             background-size: contain;
             background-repeat: no-repeat;
@@ -118,7 +117,7 @@
             position: relative;
             display: flex;
             justify-content: center;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             z-index: 2;
         }
 
@@ -149,8 +148,8 @@
 
         .player-sprite {
             position: absolute;
-            width: 50px;
-            height: 50px;
+            width: 40px; /* Reduced */
+            height: 40px;
             background-image: url('https://cdn4.iconfinder.com/data/icons/christmas-day-25/64/Elf-fairy_tale-character-fantasy-christmas-avatar-512.png');
             background-size: contain;
             background-repeat: no-repeat;
@@ -163,8 +162,8 @@
 
         .enemy-sprite {
             position: absolute;
-            width: 50px;
-            height: 50px;
+            width: 40px; /* Reduced */
+            height: 40px;
             background-image: url('https://icons.iconarchive.com/icons/martin-berube/character/256/Troll-icon.png');
             background-size: contain;
             background-repeat: no-repeat;
@@ -177,8 +176,8 @@
 
         .key-sprite {
             position: absolute;
-            width: 35px;
-            height: 35px;
+            width: 30px; /* Reduced */
+            height: 30px;
             background-image: url('https://cdn-icons-png.flaticon.com/512/415/415536.png');
             background-size: contain;
             background-repeat: no-repeat;
@@ -190,8 +189,8 @@
 
         .exit-sprite {
             position: absolute;
-            width: 30px;
-            height: 30px;
+            width: 25px; /* Reduced */
+            height: 25px;
             background-image: url('https://cdn-icons-png.flaticon.com/512/2731/2731907.png');
             background-size: contain;
             background-repeat: no-repeat;
@@ -202,55 +201,41 @@
             transform: translate(-50%, -50%);
         }
 
-  .controls {
-    display: flex;
-    gap: 10px;
-    margin-top: 15px;
-    z-index: 2;
-    position: relative;
-    
-    /* 🔴 ЦЕНТРИРОВАНИЕ КНОПОК */
-    justify-content: center;   /* ← Горизонтальное центрирование */
-    width: 100%;               /* ← Чтобы flex работал правильно */
-}
+        .controls {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+            z-index: 2;
+            position: relative;
+            justify-content: center;
+            width: 100%;
+        }
 
-button {
-    background: linear-gradient(to right, #a22128, #2f902c);
-        color: white;
-    border: none;
-    padding: 12px 24px;           /* Хорошие отступы */
-    border-radius: 12px;          /* Мягкие углы */
-    cursor: pointer;
-    font-size: 1em;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    
-    /* Тень — глубокая, для объёма */
-    box-shadow: 
-        0 6px 12px rgba(0, 0, 0, 0.3),
-        0 4px 6px rgba(0, 0, 0, 0.2);
-    
-    /* Эффекты при наведении и клике */
-    transition: all 0.3s ease;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-}
+        button {
+            background: linear-gradient(to right, #a22128, #2f902c);
+            color: white;
+            border: none;
+            padding: 10px 20px; /* Reduced */
+            border-radius: 10px; /* Reduced */
+            cursor: pointer;
+            font-size: 0.9em; /* Reduced */
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+        }
 
-/* При наведении — поднимается, становится светлее */
-button:hover {
-    background: linear-gradient(to bottom, #f87171, #ea580c);
-    transform: translateY(-2px);
-    box-shadow: 
-        0 10px 18px rgba(0, 0, 0, 0.35),
-        0 6px 8px rgba(0, 0, 0, 0.25);
-}
+        button:hover {
+            background: linear-gradient(to bottom, #f87171, #ea580c);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 18px rgba(0, 0, 0, 0.35), 0 6px 8px rgba(0, 0, 0, 0.25);
+        }
 
-/* При клике — "вдавливается" */
-button:active {
-    transform: translateY(1px);
-    box-shadow: 
-        0 3px 6px rgba(0, 0, 0, 0.2),
-        0 1px 3px rgba(0, 0, 0, 0.15);
-}
+        button:active {
+            transform: translateY(1px);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.15);
+        }
 
         .modal {
             display: none;
@@ -267,41 +252,42 @@ button:active {
 
         .modal-content {
             background-color:#005900;
-            padding: 20px;
-            border-radius: 10px;
+            padding: 15px; /* Reduced */
+            border-radius: 8px; /* Reduced */
             width: 90%;
-            max-width: 500px;
+            max-width: 400px; /* Reduced */
             box-shadow: 0 0 30px rgba(6, 182, 212, 0.3);
             border: 1px solid #06b6d4;
             z-index: 101;
         }
 
         .modal h2 {
-            margin-bottom: 15px;
+            margin-bottom: 12px; /* Reduced */
             color: #ffffff;
+            font-size: 1.4em; /* Reduced */
         }
 
         .question-text {
-            font-size: 1.4em;
-            margin-bottom: 15px;
+            font-size: 1.2em; /* Reduced */
+            margin-bottom: 12px; /* Reduced */
             text-align: center;
         }
 
         .options {
             display: flex;
             flex-direction: column;
-            gap: 8px;
-            margin-bottom: 15px;
+            gap: 6px; /* Reduced */
+            margin-bottom: 12px; /* Reduced */
         }
 
         .option-btn {
             background-color: rgba(51, 65, 85, 0.8);
             color: white;
             border: none;
-            padding: 10px;
-            border-radius: 5px;
+            padding: 8px; /* Reduced */
+            border-radius: 4px; /* Reduced */
             cursor: pointer;
-            font-size: 1.1em;
+            font-size: 1em; /* Reduced */
             transition: background-color 0.2s;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
@@ -316,39 +302,39 @@ button:active {
         }
 
         .win-stats {
-            margin: 15px 0;
+            margin: 12px 0; /* Reduced */
             text-align: center;
+            font-size: 0.9em; /* Reduced */
         }
 
         @media (max-width: 768px) {
             h1 {
-                font-size: 1.5rem;
+                font-size: 1.3rem; /* Smaller on mobile */
             }
             .stats-container {
-                gap: 15px;
-                padding: 8px 15px;
+                gap: 12px;
+                padding: 6px 12px;
             }
             .stat-value {
-                font-size: 1rem;
+                font-size: 0.9rem;
             }
             .key-icon {
-                width: 14px;
-                height: 14px;
+                width: 12px;
+                height: 12px;
             }
             .controls {
                 flex-direction: column;
                 align-items: stretch;
             }
             button {
-                font-size: 0.85em;
-                padding: 6px 12px;
+                font-size: 0.8em; /* Smaller on mobile */
+                padding: 8px 16px;
             }
         }
     </style>
 </head>
 <body>
     <h1>Эльф и волшебная математика. Deal
-	
 
     <div class="stats-container">
         <div class="stat">
