@@ -24,6 +24,7 @@
             min-height: 100vh;
             padding: 10px;
             position: relative;
+            overflow-x: hidden;
         }
 
         body::before {
@@ -38,22 +39,24 @@
         }
 
         h1 {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             color: #FFFFFF;
             text-shadow: 0 0 10px #005900;
             z-index: 2;
             position: relative;
-            font-size: 2rem;
+            font-size: 1.8rem;
+            text-align: center;
+            width: 100%;
         }
 
         .stats-container {
             display: flex;
-            gap: 15px;
-            margin-bottom: 10px;
+            gap: 12px;
+            margin-bottom: 8px;
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(200, 230, 255, 0.5));
-            padding: 10px 20px;
-            border-radius: 10px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+            padding: 8px 16px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
             z-index: 2;
             position: relative;
             width: fit-content;
@@ -69,38 +72,38 @@
         }
 
         .stat-value {
-            font-size: 1em;
+            font-size: 0.9em;
             font-weight: bold;
             color: #FF0000;
         }
 
         .stat-label {
-            font-size: 0.7em;
+            font-size: 0.6em;
             opacity: 0.8;
         }
 
         .keys-container {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             z-index: 2;
             position: relative;
         }
 
         .keys-title {
             text-align: center;
-            margin-bottom: 6px;
-            font-size: 0.9em;
+            margin-bottom: 4px;
+            font-size: 0.8em;
         }
 
         .keys-row {
             display: flex;
             justify-content: center;
-            gap: 5px;
+            gap: 4px;
             flex-wrap: wrap;
         }
 
         .key-icon {
-            width: 14px;
-            height: 14px;
+            width: 12px;
+            height: 12px;
             background-image: url('https://cdn-icons-png.flaticon.com/512/415/415536.png');
             background-size: contain;
             background-repeat: no-repeat;
@@ -117,8 +120,10 @@
             position: relative;
             display: flex;
             justify-content: center;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             z-index: 2;
+            width: 100%;
+            max-width: 100%;
         }
 
         #maze-wrapper {
@@ -148,8 +153,8 @@
 
         .player-sprite {
             position: absolute;
-            width: 45px;
-            height: 45px;
+            width: 40px;
+            height: 40px;
             background-image: url('https://cdn4.iconfinder.com/data/icons/christmas-day-25/64/Elf-fairy_tale-character-fantasy-christmas-avatar-512.png');
             background-size: contain;
             background-repeat: no-repeat;
@@ -162,8 +167,8 @@
 
         .enemy-sprite {
             position: absolute;
-            width: 45px;
-            height: 45px;
+            width: 40px;
+            height: 40px;
             background-image: url('https://icons.iconarchive.com/icons/martin-berube/character/256/Troll-icon.png');
             background-size: contain;
             background-repeat: no-repeat;
@@ -176,8 +181,8 @@
 
         .key-sprite {
             position: absolute;
-            width: 35px;
-            height: 35px;
+            width: 30px;
+            height: 30px;
             background-image: url('https://cdn-icons-png.flaticon.com/512/415/415536.png');
             background-size: contain;
             background-repeat: no-repeat;
@@ -189,8 +194,8 @@
 
         .exit-sprite {
             position: absolute;
-            width: 30px;
-            height: 30px;
+            width: 25px;
+            height: 25px;
             background-image: url('https://cdn-icons-png.flaticon.com/512/2731/2731907.png');
             background-size: contain;
             background-repeat: no-repeat;
@@ -204,28 +209,29 @@
         /* Кнопки управления для мобильных устройств */
         .mobile-controls {
             display: none; /* Скрыто по умолчанию */
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
+            position: relative;
+            margin-top: 10px;
             z-index: 10;
+            width: 100%;
+            max-width: 100%;
+            padding: 10px 0;
         }
 
         .control-buttons {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
         }
 
         .control-row {
             display: flex;
-            gap: 10px;
+            gap: 8px;
         }
 
         .control-btn {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             background-color: rgba(51, 65, 85, 0.8);
             display: flex;
@@ -233,14 +239,14 @@
             justify-content: center;
             cursor: pointer;
             color: white;
-            font-size: 1.5em;
+            font-size: 1.2em;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             transition: all 0.2s ease;
         }
 
         .control-btn:hover {
             background-color: rgba(71, 85, 105, 0.9);
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
 
         .control-btn:active {
@@ -248,19 +254,19 @@
         }
 
         .control-btn.up {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .control-btn.left {
-            margin-right: 10px;
+            margin-right: 8px;
         }
 
         .control-btn.right {
-            margin-left: 10px;
+            margin-left: 8px;
         }
 
         .control-btn.down {
-            margin-top: 10px;
+            margin-top: 8px;
         }
 
         .controls {
@@ -277,13 +283,13 @@
             background: linear-gradient(to right, #a22128, #2f902c);
             color: white;
             border: none;
-            padding: 10px 20px;
-            border-radius: 10px;
+            padding: 8px 16px;
+            border-radius: 8px;
             cursor: pointer;
-            font-size: 0.9em;
+            font-size: 0.8em;
             font-weight: 600;
             letter-spacing: 0.5px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), 0 4px 6px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
             transition: all 0.3s ease;
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
         }
@@ -291,12 +297,12 @@
         button:hover {
             background: linear-gradient(to bottom, #f87171, #ea580c);
             transform: translateY(-2px);
-            box-shadow: 0 10px 18px rgba(0, 0, 0, 0.35), 0 6px 8px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35), 0 4px 6px rgba(0, 0, 0, 0.25);
         }
 
         button:active {
             transform: translateY(1px);
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.15);
         }
 
         .modal {
@@ -314,42 +320,42 @@
 
         .modal-content {
             background-color:#005900;
-            padding: 15px;
+            padding: 12px;
             border-radius: 8px;
             width: 90%;
-            max-width: 400px;
+            max-width: 350px;
             box-shadow: 0 0 30px rgba(6, 182, 212, 0.3);
             border: 1px solid #06b6d4;
             z-index: 101;
         }
 
         .modal h2 {
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             color: #ffffff;
-            font-size: 1.4em;
+            font-size: 1.2em;
         }
 
         .question-text {
-            font-size: 1.2em;
-            margin-bottom: 12px;
+            font-size: 1em;
+            margin-bottom: 10px;
             text-align: center;
         }
 
         .options {
             display: flex;
             flex-direction: column;
-            gap: 6px;
-            margin-bottom: 12px;
+            gap: 5px;
+            margin-bottom: 10px;
         }
 
         .option-btn {
             background-color: rgba(51, 65, 85, 0.8);
             color: white;
             border: none;
-            padding: 8px;
+            padding: 6px;
             border-radius: 4px;
             cursor: pointer;
-            font-size: 1em;
+            font-size: 0.9em;
             transition: background-color 0.2s;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
@@ -364,51 +370,53 @@
         }
 
         .win-stats {
-            margin: 12px 0;
+            margin: 10px 0;
             text-align: center;
-            font-size: 0.9em;
+            font-size: 0.8em;
         }
 
         /* Улучшения для мобильных устройств */
         @media (max-width: 768px) {
             h1 {
-                font-size: 1.5rem;
+                font-size: 1.4rem;
+                margin-bottom: 6px;
             }
             .stats-container {
-                gap: 12px;
+                gap: 10px;
                 padding: 6px 12px;
             }
             .stat-value {
-                font-size: 0.9rem;
+                font-size: 0.8rem;
             }
             .key-icon {
-                width: 16px;
-                height: 16px;
+                width: 14px;
+                height: 14px;
             }
             .controls {
                 flex-direction: column;
                 align-items: stretch;
+                gap: 6px;
             }
             button {
-                font-size: 0.85em;
-                padding: 8px 16px;
+                font-size: 0.75em;
+                padding: 6px 12px;
             }
             /* Увеличиваем спрайты на мобильных */
             .player-sprite {
-                width: 50px;
-                height: 50px;
+                width: 45px;
+                height: 45px;
             }
             .enemy-sprite {
-                width: 50px;
-                height: 50px;
+                width: 45px;
+                height: 45px;
             }
             .key-sprite {
-                width: 40px;
-                height: 40px;
-            }
-            .exit-sprite {
                 width: 35px;
                 height: 35px;
+            }
+            .exit-sprite {
+                width: 30px;
+                height: 30px;
             }
             /* Показываем мобильные кнопки управления */
             .mobile-controls {
@@ -417,6 +425,12 @@
             /* Скрываем стандартные кнопки управления на мобильных */
             .controls {
                 display: none;
+            }
+            /* Уменьшаем размеры кнопок управления */
+            .control-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 1.1em;
             }
         }
     </style>
